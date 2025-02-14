@@ -32,7 +32,9 @@ async function main() {
   let keyPair = await mnemonicToPrivateKey(envMnemonicKey1.split(" "));
   let workchain = 0;
 
-  // WalletContractV4 实际上是 wallet_v4r2
+  // 注意：WalletContractV4 实际上是 wallet_v4r2，你需要根据你的钱包版本选择不同的合约，如 WalletContractV5R1
+  // 注意：WalletContractV4 实际上是 wallet_v4r2，你需要根据你的钱包版本选择不同的合约，如 WalletContractV5R1
+  // 注意：WalletContractV4 实际上是 wallet_v4r2，你需要根据你的钱包版本选择不同的合约，如 WalletContractV5R1
   let wallet = WalletContractV4.create({
     workchain,
     publicKey: keyPair.publicKey,
@@ -48,17 +50,7 @@ async function main() {
   console.info(balance);
   console.info(seq);
 
-  // Create a msg
   let seqno: number = await contract.getSeqno();
-
-  // createTransfer<T extends Wallet4SendArgsSigned | Wallet4SendArgsSignable>(args: T):
-  // T extends Wallet4SendArgsSignable ? Promise<Cell> : Cell;
-
-  //1.函数 createTransfer
-  //2.参数注解 <T extends Wallet4SendArgsSigned | Wallet4SendArgsSignable>
-  //3.参数 (args: T):
-  //4.返回值类型推断 T extends Wallet4SendArgsSignable ? Promise<Cell> : Cell;
-  // 备注 4. 根据参数来推断不同的返回值，如果是需要签名的参数，则返回值是一个 Promise
 
   console.info("------------------------------------------------------------");
   console.info(
