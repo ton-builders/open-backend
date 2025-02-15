@@ -90,10 +90,10 @@ async function main() {
     init: null,
   });
 
-  let externalInMsg = new Cell().asBuilder();
-  let builder = storeMessage(externalMessage);
-  builder(externalInMsg);
-  let externalInMsgCell = externalInMsg.endCell();
+  let externalInMsgBuilder = new Cell().asBuilder();
+  let msgBuilderFunction = storeMessage(externalMessage);
+  msgBuilderFunction(externalInMsgBuilder);
+  let externalInMsgCell = externalInMsgBuilder.endCell();
   // API参考 1 https://testnet.toncenter.com/api/v3/index.html#/blockchain/api_v3_get_transactions_by_message
   // msg_hash 的参数设置为 msgHashHex 或 msgHashBase64 查询
 
