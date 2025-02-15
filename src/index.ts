@@ -43,14 +43,12 @@ async function main() {
 
   // Get balance
   let balance: bigint = await contract.getBalance();
-  let seq = await contract.getSeqno();
+  let seqno: number = await contract.getSeqno();
   console.info(process.env.TON_NETWORK);
   console.info(endpoint);
   console.info(contract.address);
   console.info(balance);
-  console.info(seq);
-
-  let seqno: number = await contract.getSeqno();
+  console.info(seqno);
 
   console.info("------------------------------------------------------------");
   console.info(
