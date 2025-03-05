@@ -6,6 +6,8 @@
   "scripts": {
     "start": "ts-node src/index.ts",
     "addr": "ts-node src/addr.ts",
+    "cell-encode": "ts-node src/cell-encode.ts",
+    "cell-decode": "ts-node src/cell-decode.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
   },

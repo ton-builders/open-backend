@@ -5,7 +5,7 @@ import { Address } from '@ton/core';
 dotenv.config();
 
 async function main() {
-  const addr = Address.parse('UQB2IpvhM_HZe4HvqHlSFaRrzrK8O53h7n95CfjInUWB9EeD');
+  const addr = Address.parse('0QAAQ3X8LZ3qmwnIgaXwgysWnBBBE8T26G8B4iQ4-PHDGHQC');
   console.log('default (main,bounceable)= ', addr.toString());
   console.log('main, bounceable = ', addr.toString({ testOnly: false, bounceable: true }));
   console.log('main, non-bounceable = ', addr.toString({ testOnly: false, bounceable: false }));
