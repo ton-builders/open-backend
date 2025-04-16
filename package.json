@@ -8,6 +8,7 @@
     "addr": "ts-node src/addr.ts",
     "cell-encode": "ts-node src/cell-encode.ts",
     "cell-decode": "ts-node src/cell-decode.ts",
+    "tx-msg": "ts-node src/get-TX-by-msgId.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
